@@ -104,6 +104,7 @@ template "#{project_path}/settings.json" do
     :log_level => node['etherpad-lite']['log_level'],
     :suppress_errors_in_pad_text => node['etherpad-lite']['suppress_errors_in_pad_text']
   })
+  notifies :restart, "runit_service[etherpad-lite]"
 end
 
 etherpad_api_key = node['etherpad-lite']['etherpad_api_key']

@@ -21,6 +21,7 @@
 case node['platform_family']
   when "debian", "ubuntu"
     packages = %w{gzip git-core curl python libssl-dev pkg-config build-essential}
+    include_recipe "apt::default"
   when "fedora","centos","rhel"
     packages = %w{gzip git-core curl python openssl-devel}
     # && yum groupinstall "Development Tools"

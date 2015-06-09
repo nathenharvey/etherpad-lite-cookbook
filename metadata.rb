@@ -6,6 +6,7 @@ description      'Installs etherpad-lite'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.3.4'
 
+depends         'apt'
 depends         'nodejs'
 depends         'database'
 depends         'postgresql'

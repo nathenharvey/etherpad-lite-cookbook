@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of etherpad-lite.
 
+## 0.3.2
+- Cleans up some of the resource execution
+
 ## 0.3.1
 - Corrects the way we were doing https uplift
 

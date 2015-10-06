@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of etherpad-lite.
 
+## 0.3.1
+- Corrects the way we were doing https uplift
+
 ## 0.3.0
 - Adds the ability to do https uplift when behind an ELB
 

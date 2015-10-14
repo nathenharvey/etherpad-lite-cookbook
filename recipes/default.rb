@@ -200,6 +200,7 @@ unless node['etherpad-lite']['plugins'].empty?
     npm_package plugin_npm_module do
       path project_path
       action :install_local
+      notifies :restart, 'runit_service[etherpad-lite]', :delayed
     end
   end
 end

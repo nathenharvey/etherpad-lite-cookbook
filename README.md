@@ -43,6 +43,7 @@ The following attributes should be set based on your specific deployment, see th
 * `node['etherpad-lite']['admin_enabled']` - Enable the admin interface
 * `node['etherpad-lite']['admin_password']` - Password for "admin" user.
 * `node['etherpad-lite']['log_level']` - The log level we are using, can be: DEBUG, INFO, WARN, ERROR
+* `node['etherpad-lite']['suppress_errors_in_pad_text']` - Should we suppress errors from being visible in the default Pad Text? Can be: true, false
 * `node['etherpad-lite']['service_user']` - user to run etherpad
 * `node['etherpad-lite']['service_user_gid']` - group to run etherpad
 * `node['etherpad-lite']['service_user_home']`- home dir

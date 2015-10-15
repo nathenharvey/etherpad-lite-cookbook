@@ -10,7 +10,7 @@
   // favicon default name
   // alternatively, set up a fully specified Url to your own favicon
   "favicon": "<%= @favicon_url %>",
-  
+
   //IP and port which etherpad should bind at
   "ip": "<%= @ip_address %>",
   "port" : <%= @port_number %>,
@@ -42,23 +42,23 @@
                     "password": "<%= @db_password %>",
                     "database": "<%= @db_name %>"
                   },
-  
+
   //Logging configuration. See log4js documentation for further information
   // https://github.com/nomiddlename/log4js-node
   "logconfig" :
 { "appenders": [
 { "type": "console" }
 ] },
-  
+
   //the default text of a pad
   "defaultPadText" : "<%= @default_text %>",
-  
+
   /* Users must have a session to access pads. This effectively allows only group pads to be accessed. */
   "requireSession" : <%= @require_session %>,
 
   /* Users may edit pads but not create new ones. Pad creation is only via the API. This applies both to group pads and regular pads. */
   "editOnly" : <%= @edit_only %>,
-  
+
   /* if true, all css & js will be minified before sending to the client. This will improve the loading performance massivly,
      but makes it impossible to debug the javascript/css */
   "minify" : <%= @minify %>,
@@ -66,11 +66,11 @@
   /* How long may clients use served javascript code (in seconds)? Without versioning this
      may cause problems during deployment. Set to 0 to disable caching */
   "maxAge" : <%= @max_age %>, // 60 * 60 * 6 = 6 hours
-  
+
   /* This is the path to the Abiword executable. Setting it to null, disables abiword.
      Abiword is needed to advanced import/export features of pads*/
   "abiword" : "<%= @abiword_path %>",
- 
+
   /* This setting is used if you require authentication of all users.
      Note: /admin always requires authentication. */
   "requireAuthentication": <%= @require_authentication %>,
@@ -91,5 +91,8 @@
   "loglevel": "<%= @log_level %>",
 
   // restrict socket.io transport methods
-  "socketTransportProtocols" : ["xhr-polling", "jsonp-polling", "htmlfile"]
+  "socketTransportProtocols" : ["xhr-polling", "jsonp-polling", "htmlfile"],
+
+  // Suppress errors in new Pads
+  "suppressErrorsInPadText" : <%= @suppress_errors_in_pad_text.to_s %>
 }

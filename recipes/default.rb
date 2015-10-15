@@ -101,7 +101,8 @@ template "#{project_path}/settings.json" do
     :require_authorization => node['etherpad-lite']['require_authorization'],
     :admin_enabled => node['etherpad-lite']['admin_enabled'],
     :admin_password => node['etherpad-lite']['admin_password'],
-    :log_level => node['etherpad-lite']['log_level']
+    :log_level => node['etherpad-lite']['log_level'],
+    :suppress_errors_in_pad_text => node['etherpad-lite']['suppress_errors_in_pad_text']
   })
 end
 

@@ -35,6 +35,7 @@ default['etherpad-lite']['require_authorization'] = "false"
 default['etherpad-lite']['admin_enabled'] = false
 default['etherpad-lite']['admin_password'] = ""
 default['etherpad-lite']['log_level'] = "INFO"
+default['etherpad-lite']['suppress_errors_in_pad_text'] = true
 
 service_user = "etherpad-user"
 

@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of etherpad-lite.
 
+## 0.3.4
+- Adds pad text error suppression
+
 ## 0.3.3
 - Adds a notify to restart the service
 
